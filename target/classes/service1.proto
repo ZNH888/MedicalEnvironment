@@ -1,0 +1,29 @@
+syntax = "proto3";
+option java_multiple_files = false;
+option java_package = "ds.zhuldyz.service1";
+option java_outer_classname = "Service1Proto";
+package patientmonitoring;
+
+service PatientMonitoringService {
+  rpc GetVitalSigns(GetVitalSignsRequest) returns (GetVitalSignsResponse) {}
+  rpc SetAlertValue(SetAlertValueRequest) returns (Acknowledgment) {}
+}
+
+message GetVitalSignsRequest {
+  string patient_id = 1;
+}
+
+message GetVitalSignsResponse {
+  float blood_pressure = 1;
+  float temperature = 2;
+}
+
+message SetAlertValueRequest {
+  string patient_id = 1;
+  float blood_pressure_value = 2;
+  float temperature_value = 3;
+}
+
+message Acknowledgment {
+  bool success = 1;
+}
