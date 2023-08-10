@@ -10,17 +10,15 @@ public class PrescriptionManagementServiceImplementation extends PrescriptionMan
   @Override
   public void createPrescription(CreatePrescriptionRequest request,
                                  StreamObserver<CreatePrescriptionResponse> responseObserver) {
-    // Retrieve patient ID and doctor ID from the request
+  
     String patientId = request.getPatientId();
     String doctorId = request.getDoctorId();
 
-    // TODO: Implement prescription creation logic
-    
 
     // Create the prescription response
     CreatePrescriptionResponse response = CreatePrescriptionResponse.newBuilder()
-        .setMedicineName("Sample Medicine")
-        .setDose("Sample Dose")
+        .setMedicineName("Paracetamol")
+        .setDose("500mg")
         .build();
 
     // Send the response to the client

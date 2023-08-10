@@ -1385,10 +1385,6 @@ public final class Service4Proto {
     public ds.zhuldyz.service4.Service4Proto.CreatePrescriptionResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
-	public String getPrescriptionId() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
   }
 
